@@ -21,11 +21,11 @@ import shutil
 
 loginEmail = 2
 passwordEmail = 2
-loginJw = 2
-passwordJw = 2
+login = 2
+password = 2
 
 urlEmail = 2
-urlJw = 2
+url = 2
 
 try:
     os.mkdir('./Baixados')
@@ -104,17 +104,17 @@ class Dados:
             pass
         else:
 
-            self.driver.get(urlJw)
+            self.driver.get(url)
             sleep(2)
 
             op = True
             while op:
-                userJw = self.wdw.until(condicaoEsperada.element_to_be_clickable((By.ID, 'user_email')))
+                user = self.wdw.until(condicaoEsperada.element_to_be_clickable((By.ID, 'user_email')))
                 userPassword = self.wdw.until(condicaoEsperada.element_to_be_clickable((By.ID, 'user_password')))
                 btn_login = self.driver.find_element(By.XPATH, '//*[@id="new_user"]/div[2]/div/div[1]/input')
-                userJw.send_keys(loginJw)
-                print(f'Email {loginJw} utilizado')
-                userPassword.send_keys(passwordJw)
+                user.send_keys(login)
+                print(f'Email {login} utilizado')
+                userPassword.send_keys(password)
                 btn_login.click()
                 op = False
 
