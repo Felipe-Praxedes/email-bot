@@ -19,13 +19,13 @@ import sys
 import pathlib
 import shutil
 
-loginEmail = 'cte.marba@jotaw.com'
-passwordEmail = '@Jotaw347895'
-loginJw = 'cte.marba@jotaw.com'
-passwordJw = 'ctemarba'
+loginEmail = 2
+passwordEmail = 2
+loginJw = 2
+passwordJw = 2
 
-urlEmail = 'https://webmail1.hostinger.com.br/'
-urlJw = 'https://jotaw.eslcloud.com.br/users/sign_in'
+urlEmail = 2
+urlJw = 2
 
 try:
     os.mkdir('./Baixados')
