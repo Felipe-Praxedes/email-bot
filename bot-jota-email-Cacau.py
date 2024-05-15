@@ -19,15 +19,15 @@ import sys
 import pathlib
 import shutil
 
-loginEmail = 'cte.marba@jotaw.com'
-passwordEmail = '@Jotaw347895'  
+loginEmail = 2
+passwordEmail = 3 
 
-loginJw = 'cte.marba@jotaw.com'
-passwordJw = 'ctemarba'
+login = 4
+password = 5
 
-urlEmail = 'https://webmail1.hostinger.com.br/'
-urlJw = 'https://jotaw.eslcloud.com.br/users/sign_in'
-urlFretes = 'https://jotaw.eslcloud.com.br/freight/normals/new'
+urlEmail =5
+url = 5
+urlFretes =5
 
 global matriz
 
@@ -66,17 +66,17 @@ class Dados:
 
         self.baixarXml(self.driver)
         
-        self.driver.get(urlJw)
+        self.driver.get(url)
         sleep(2)
 
         op = True
         while op:
-            userJw = self.wdw.until(condicaoEsperada.element_to_be_clickable((By.ID, 'user_email')))
+            user = self.wdw.until(condicaoEsperada.element_to_be_clickable((By.ID, 'user_email')))
             userPassword = self.wdw.until(condicaoEsperada.element_to_be_clickable((By.ID, 'user_password')))
             btn_login = self.driver.find_element(By.XPATH,'//*[@id="new_user"]/div[2]/div/div[1]/input')
-            userJw.send_keys(loginJw)
-            print(f'Email {loginJw} utilizado')
-            userPassword.send_keys(passwordJw)
+            user.send_keys(login)
+            print(f'Email {login} utilizado')
+            userPassword.send_keys(password)
             btn_login.click()
             op = False
 
